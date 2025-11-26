@@ -49,6 +49,7 @@ $page_title = 'Trang Admin - Danh sách các loài hoa';
             padding: 12px 15px; 
             text-align: left; 
             vertical-align: middle; /* Căn giữa nội dung ô theo chiều dọc */
+           
         }
         th { 
             background-color: #f8f8f8; 
@@ -57,6 +58,21 @@ $page_title = 'Trang Admin - Danh sách các loài hoa';
             text-transform: uppercase;
             font-size: 14px;
         }
+        .flower-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+td.description {
+    white-space: normal !important;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 350px; 
+    line-height: 1.4;
+}
+
+
     </style>
 </head>
 
@@ -78,7 +94,10 @@ $page_title = 'Trang Admin - Danh sách các loài hoa';
             <tr>
                 <td><?php echo $flower['id']; ?></td>
                 <td><?php echo $flower['ten_hoa']; ?></td>
-                <td><?php echo substr($flower['mo_ta'], 0, 100) . '...'; ?></td>
+                <td class="description"><?php echo $flower['mo_ta']; ?></td>
+
+                
+
                <td>
                     <img src="<?php echo $flower['hinh_anh']; ?>" alt="<?php echo $flower['ten_hoa']; ?>" class="flower-image">
                 </td>

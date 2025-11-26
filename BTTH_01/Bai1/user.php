@@ -69,9 +69,10 @@ $page_title = '14 loại hoa tuyệt đẹp thích hợp trồng để khoe hư�
             echo '<style>body { counter-reset: flower-counter 0; }</style>';
             foreach ($flowers as $flower): ?>
                 <div class="flower-item">
-                    <img src="<?php echo $flower['hinh_anh']; ?>" alt="<?php echo $flower['ten_hoa']; ?>">
+                    
                     <h3><?php echo $flower['ten_hoa']; ?></h3>
                     <p><?php echo $flower['mo_ta']; ?></p>
+                    <img src="<?php echo $flower['hinh_anh']; ?>" alt="<?php echo $flower['ten_hoa']; ?>">
                 </div>
             <?php endforeach; ?>
         </div>
